@@ -1,0 +1,26 @@
+{
+  "name": "dcimporter",
+  "authors": [
+    "tykayn <contact@artlemoine.com>"
+  ],
+  "description": "",
+  "main": "index.php",
+  "keywords": [
+    "dotclear",
+    "wordpress",
+    "importer",
+    "migration"
+  ],
+  "license": "MIT",
+  "homepage": "artlemoine.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
