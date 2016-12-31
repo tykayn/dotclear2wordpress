@@ -1,4 +1,34 @@
 fieldset{
-    border: solid 3px grey;
-    padding: 0.5em 1em;
+    border: solid 3px grey !important;
+    padding: 1em;
+background: #fff;
+
+}
+.middle{
+    display: inline-flex;
+    justify-content: center;
+    padding-top: 8em;
+}
+h3{
+    margin-top: 0.25em;
+}
+a{
+    color: #00b3ee;
+}
+label{
+    margin-top: 0.5em;
+}
+input{
+    padding: 0.5em;
+    border: solid #ccc 3px;
+    border-radius: 0.5em;
+}
+footer{
+    padding: 1em;
+    background: #dedede;
+    color: #222;
+
+}
+.padded{
+    padding: 1em;
 }

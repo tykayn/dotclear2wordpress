@@ -9,13 +9,10 @@ require( 'src/tpl/head.php' );
 	<form action="post.php" method="post">
 		<div class="alert alert-info">
 
-			infos sur la base de données où se trouvent les tables dotclear: bdd name:
+			infos sur la base de données où se trouvent les tables dotclear:
 		</div>
 		<div class="form-group">
-			<input type="text" name="dc_bdd" placeholder="bdd dotclear"
-						value="<?php if (isset( $_POST[ 'dc_user' ] )) {
-							echo $_POST[ 'dc_user' ];
-						} ?>">
+
 			<div class="well">
 				<ul>
 					<li>
@@ -26,50 +23,76 @@ require( 'src/tpl/head.php' );
 						l'utilisateur doit avoir accès aux deux BDD.
 					</li>
 				</ul>
+				<fieldset>
+					<div class="row-fluid">
+						<div class="col-xs-6">
+							user:
+							<input type="text" name="user" placeholder="user">
+						</div>
+						<div class="col-xs-6"> pass:
+							<input type="password" name="dc_pass" placeholder="pass">
+						</div>
+					</div>
+
+
+				</fieldset>
 			</div>
+			<div class="row-fluid">
+				<div class="col-md-5 col-xs-12">
+					<fieldset>
+						<h3>Dotclear</h3>
+						<div class="row-fluid">
+							bdd name:
+							<input type="text" name="dc_bdd" placeholder="bdd dotclear"
+										value="<?php if (isset($_POST[ 'dc_user' ])) {
+                        echo $_POST[ 'dc_user' ];
+                    } ?>">
+							<label for="blog_name">
+								nom du blog à transférer:
+							</label>
+							<input type="text" name="blog_name" id="blog_name" value="default" placeholder="default">
+							<br>
 
-			user:
-			<input type="text" name="user" placeholder="user">
-			pass:
-			<input type="password" name="dc_pass" placeholder="pass">
-			<fieldset>
-				<h3>Dotclear</h3>
-				<div class="row">
-							<div class="col-xs-6">
-								<label for="blog_name">
-									nom du blog à transférer:
-								</label>
-								<input type="text" name="blog_name" id="blog_name" value="default" placeholder="default">
-							</div>
-							<div class="col-xs-6">
-								préfixe des tables:
-								<input type="text" name="dc_prefix" placeholder="dc" value="dc_">
-							</div>
+							préfixe des tables:
+							<input type="text" name="dc_prefix" placeholder="dc" value="dc_">
+						</div>
+
+					</fieldset>
 				</div>
+				<div class="col-md-2 col-xs-12 middle">
+					<i class="fa fa-arrow-right fa-2x"></i>
+				</div>
+				<div class="col-md-5 col-xs-12">
+					<fieldset>
+						<h3>Wordpress</h3>
 
-			</fieldset>
-			<hr>
-			<fieldset>
-				<h3>Wordpress</h3>
+						infos sur la base de données où se trouvent les tables wordpress: <br>
+						bdd name:<br>
+						<input type="text" name="wp_bdd" placeholder="bdd wordpress"
+									value="<?php if (isset($_POST[ 'wp_bdd' ])) {
+                      echo $_POST[ 'wp_bdd' ];
+                  } ?>">
+						<br> préfixe des tables:
+						<input type="text" name="wp_prefix" placeholder="wp_"
+									value="<?php if (isset($_POST[ 'wp_prefix' ])) {
+                      echo $_POST[ 'wp_prefix' ];
+                  } else {
+                      echo "wp_";
+                  } ?>">
 
-				infos sur la base de données où se trouvent les tables wordpress: bdd name:
-				<input type="text" name="wp_bdd" placeholder="bdd wordpress"
-							value="<?php if (isset( $_POST[ 'wp_bdd' ] )) {
-								echo $_POST[ 'wp_bdd' ];
-							} ?>">
-				préfixe des tables:
-				<input type="text" name="wp_prefix" placeholder="wp_"
-							value="<?php if (isset( $_POST[ 'wp_prefix' ] )) {
-								echo $_POST[ 'wp_prefix' ];
-							} else {
-								echo "wp_";
-							} ?>">
+					</fieldset>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="col-xs-12">
+					<div class="padded">
 
-			</fieldset>
+						<input type="submit" class="btn btn-primary btn-block btn-lg" value="test connec">
+					</div>
 
+				</div>
+			</div>
 		</div>
-
-		<input type="submit" class="btn btn-primary" value="test connec">
 
 	</form>
 </div>
