@@ -7,10 +7,6 @@ require( 'src/tpl/head.php' );
 
 
 	<form action="post.php" method="post">
-		<div class="alert alert-info">
-
-			infos sur la base de données où se trouvent les tables dotclear:
-		</div>
 		<div class="form-group">
 
 			<div class="well">

@@ -8,7 +8,7 @@ require( 'src/connect.php' );
 
 
 
-require( 'tpl/head.php' );
+require( 'src/tpl/head.php' );
 
 
 // take posts
@@ -57,5 +57,5 @@ echo " </div>";
 echo $GLOBALS['reports'] ; ?>
 
 <?php
-require( 'tpl/foot.php' );
+require( 'src/tpl/foot.php' );
 ?>
