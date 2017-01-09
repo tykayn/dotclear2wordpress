@@ -17,6 +17,7 @@ require( 'src/tpl/head.php' );
 // link to wp categories
 // link to wp user
 // link to wp tags
+require( 'src/find_blogs.php' );
 require( 'src/find_posts.php' );
 
 

@@ -22,7 +22,7 @@ $result->setFetchMode(PDO::FETCH_OBJ);
 $tags = [];
 $tagsTimes = []; // number of times a tag is found
 
-echo "<br/>résultats des posts:";
+echo "<br/>résultats des tags:";
 
 /**
  * tags DC
